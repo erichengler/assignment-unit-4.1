@@ -92,25 +92,68 @@ console.log( find( 'Elden Ring', videogames ));
 // ----------------------
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
-function isFirstLetter(letter, string) {
-
+function isFirstLetter( letter, string ) {
+  if ( letter === string.charAt(0) ) {
+    return true;
+  } else {
+    return false;
+  }
 }
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll( ) {
+let numberArray = [ 3, 7, 15, 40, 100 ];
+let numberArray2 = [ 1, 1, 1, 1, 1 ];
+function sumAll( array ) {
   let sum = 0
-  // TODO: loop to add items
+  for ( let number of array ) {
+    sum += number
+    number += 1;
+  }
   return sum;
-}
+} 
+console.log( sumAll( numberArray ) );
+console.log( sumAll( numberArray2 ) );
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
+let numArray = [ -20, -7, 6, 14, 25 ];
+let numArray2 = [ -10, -5, -2 ];
+function allPositive( array ) {
+  let posArray = [];
+  for ( let number of array ) {
+    if ( number > 0 ) {
+      posArray.push( number );
+    } number += 1;
+  } return posArray;
+}
+console.log( allPositive( numArray ) );
+console.log( allPositive( numArray2 ) );
 
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it
+/* 
+* Write a function which calculates the average of the numbers in a given list.
+* Note: Empty arrays should return 0.
+*/
+let numArray3 = [ 15, 21, 35, 80, 149 ];
+let numArray4 = [];
+function averageAll( array ) {
+  let average = 0;
+  for ( let number of array ) {
+    average += number;
+    number += 1;
+  } average = ( average / array.length );
+  if ( array.length > 0 ) {
+    return average;
+  } else {
+    return 0;
+  }
+}
+console.log( averageAll( numArray3 ) );
+console.log( averageAll( numArray4 ) );
