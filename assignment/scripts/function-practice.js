@@ -14,31 +14,37 @@ console.log('Test - should say "Hello World!"', hello());
 
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
-function helloName( name ) {
-  return;
+function helloName(name) {
+  return `Why hello there, ${name}!`;
 }
 // Remember to call the function to test
+console.log( helloName( 'Jeff' ));
+console.log( helloName( 'John' ));
 
 
 // 3. Function to add two numbers together & return the result
-function addNumbers( firstNumber ) {
-  // return firstNumber + secondNumber;
+function addNumbers( firstNumber, secondNumber ) {
+  return firstNumber + secondNumber;
 }
+console.log( addNumbers( 5, 4 ) );
+console.log( addNumbers( 130, 70 ) );
 
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree( ){
-
+function multiplyThree( firstNumber, secondNumber, thirdNumber ){
+  return firstNumber * secondNumber * thirdNumber;
 }
+console.log( multiplyThree( 2, 4, 6 ));
+console.log( multiplyThree( 3, 2, 5 ));
 
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
   if ( number > 0 ){
-    return;
-  }
-    return;
+    return true;
+  } else
+    return false;
 }
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
@@ -49,16 +55,37 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
+let videogames = [ 'Path of Exile', 'Mass Effect', 'Bioshock' ];
+let nothing = [];
 function getLast( array ) {
-
+  if ( array.length > 0 ) {
+    return array[ array.length - 1 ]
+  } else {
+    return 'undefined'
+  }
 }
+console.log( getLast( videogames ));
+console.log( getLast( nothing ));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find( value, array ){
-  
-}
+  let i = 0;
+  while ( i < array.length ){
+    i += 1;
+    if ( array[i] === value ){
+      return true;
+    } else {
+      return false;
+    }
+
+  }
+} 
+   
+console.log( find( 'Mass Effect', videogames ));
+console.log( find( 'Elden Ring', videogames ));
+
 
 // ----------------------
 // Stretch Goals
@@ -86,4 +113,4 @@ function sumAll( ) {
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
-//     here in a comment, write the function, and test it!
+//     here in a comment, write the function, and test it
