@@ -132,8 +132,6 @@ function allPositive( array ) {
 console.log( allPositive( numArray ) );
 console.log( allPositive( numArray2 ) );
 
-
-
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it
@@ -157,3 +155,16 @@ function averageAll( array ) {
 }
 console.log( averageAll( numArray3 ) );
 console.log( averageAll( numArray4 ) );
+
+/*
+* Given a random non-negative number, you have to return the digits of this 
+* number within an array in reverse order.
+*/
+let randomNumber = 75208;
+let reverseArray = [];
+reverseArray.push( Math.floor( ( randomNumber / 1 ) % 10) );
+reverseArray.push( Math.floor( ( randomNumber / 10 ) % 10) );
+reverseArray.push( Math.floor( ( randomNumber / 100 ) % 10) );
+reverseArray.push( Math.floor( ( randomNumber / 1000 ) % 10) );
+reverseArray.push( Math.floor( ( randomNumber / 10000 ) % 10) );
+console.log ( reverseArray );
